@@ -15,5 +15,5 @@ RHEL 7 tips and tricks
   * `grep -Ei "[a-z][0-9]|[0-9][a-z]" sample.txt |sort >>/root/samplelines`
   
   4. Locate the files of owner `larry` and copy to the directory `/root/found` directory
-* mkdir -p /root/found
-* find / -user larry -exec cp -rp {} /root/found \;
+* `mkdir -p /root/found`
+* `find / -user larry -type f | xargs cp -rp {} /root/found`
