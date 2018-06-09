@@ -17,3 +17,6 @@ RHEL 7 tips and tricks
   4. Locate the files of owner `larry` and copy to the directory `/root/found` directory
 * `mkdir -p /root/found`
 * `find / -user larry -type f | xargs cp -rp {} /root/found`
+
+5. Create the user "dax" with uid 4223.
+* `useradd -u 4223 dax`
