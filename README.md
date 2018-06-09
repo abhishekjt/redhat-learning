@@ -10,3 +10,5 @@ RHEL 7 tips and tricks
   
   2. List all lines which have string `enter` from `/usr/share/dict/words` file and copy the lines to `/root/words.found` file.
   * `grep "enter" /usr/share/dict/words >>/root/word.found`
+  
+  3. Download file from `"http://classroom.example.com/content/rhcsa/sample.txt"` Search lines which contains alpha-numeric words( combination of alphabets and number) and copy those lines is sorted order to `/root/samplelines` file.
