@@ -7,3 +7,6 @@ RHEL 7 tips and tricks
   * set `SELINUX=enforcing`
   * reboot (to make it persistent)
   * Confirm that `getenforce` returns `Enforcing`
+  
+  2. List all lines which have string `enter` from `/usr/share/dict/words` file and copy the lines to `/root/words.found` file.
+  * `grep "enter" /usr/share/dict/words >>/root/word.found`
