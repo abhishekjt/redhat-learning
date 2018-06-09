@@ -20,3 +20,8 @@ RHEL 7 tips and tricks
 
 5. Create the user "dax" with uid 4223.
 * `useradd -u 4223 dax`
+
+6. Compress `/etc` folder with `gun zip` technique under the directory `/opt`
+* `cd /opt`
+* `tar -cvf etc.tar /etc`
+* `gzip etc.tar`
