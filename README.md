@@ -12,3 +12,4 @@ RHEL 7 tips and tricks
   * `grep "enter" /usr/share/dict/words >>/root/word.found`
   
   3. Download file from `"http://classroom.example.com/content/rhcsa/sample.txt"` Search lines which contains alpha-numeric words( combination of alphabets and number) and copy those lines is sorted order to `/root/samplelines` file.
+  * grep -Ei "[a-z][0-9]|[0-9][a-z]" sample.txt |sort >>/root/samplelines
