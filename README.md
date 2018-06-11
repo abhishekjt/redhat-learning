@@ -25,3 +25,11 @@ RHEL 7 tips and tricks
 * `cd /opt`
 * `tar -cvf etc.tar /etc`
 * `gzip etc.tar`
+
+7. Create the SWAP space of "250 MB” dont remove the existing swap.
+* `free -m`
+* `fdisk /dev/devicename` #create partition with 250MB
+* `mkswap /dev/devicename`
+* make entry in `/etc/fstab` 
+* `swapon -a`
+* `free -m`
