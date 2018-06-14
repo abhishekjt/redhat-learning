@@ -77,7 +77,7 @@ RHEL 7 tips and tricks
 * `chmod 770 /home/manager`
 * `usermod g+s /home/manager` (g+s means that all new files and subdirectories created within the current directory inherit the group ID of the directory)
 
-* Copy the file /etc/fstab to /var/tmp and configure the "ACL" as mention following. The file /var/tmp/fstab is owned by the "root". The file /var/tmp/fstab belongs to the group "root" The file /var/tmp/fstab should not be executable by other's. The user "curly" should able to read and write to the file. The user "larry" can neither read nor write to the file. other users (future and current) shuold be able to read /var/tmp/fstab.
+13. Copy the file /etc/fstab to /var/tmp and configure the "ACL" as mention following. The file /var/tmp/fstab is owned by the "root". The file /var/tmp/fstab belongs to the group "root" The file /var/tmp/fstab should not be executable by other's. The user "curly" should able to read and write to the file. The user "larry" can neither read nor write to the file. other users (future and current) shuold be able to read /var/tmp/fstab.
 * `cp /etc/fstab /var/tmp/`
 * `chown root /var/tmp/fstab`
 * `chgrp root /var/tmp/fstab`
