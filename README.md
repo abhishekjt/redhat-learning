@@ -57,5 +57,6 @@ RHEL 7 tips and tricks
 * `lvcreate -L +160M -n slab marvel`
 * `mkfs.xfs /dev/marvel/slab`
 * make the entry in /etc/fstab
-* `lvextend -L +160M /dev/marvel/slab` (if it shows no space, add volume using vgextend )
-* `xfs_growfs /dev/marvel/slab`
+* `lvextend -L +160M /dev/marvel/slab` (if it shows no space, add volume using vgextend ) (check `lvs`)
+* `xfs_growfs /dev/marvel/slab` (check `df-h`)
+
