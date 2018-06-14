@@ -28,8 +28,8 @@ RHEL 7 tips and tricks
 
 7. Create the SWAP space of "250 MB” dont remove the existing swap.
 * `free -m`
-* `fdisk /dev/devicename` #create partition with 250MB
-* `mkswap /dev/devicename`
+* `fdisk /dev/sda` #create partition with 250MB
+* `mkswap /dev/sda#`
 * make entry in `/etc/fstab` 
 * `swapon -a`
 * `free -m`
