@@ -34,3 +34,15 @@ RHEL 7 tips and tricks
 * `mount -a`
 * `swapon -a`
 * `free -m`
+
+8. Create the "LVM" with the name "store" by using 15PE's from the volume group "data". Consider the PE size as "16MB". Mount it on /mnt/store with filesystem vfat.
+* Make sure extended partition is already created , if not create it by doing `fdisk`, `e` and select the default options and save it.
+* `fdisk /dev/sda` with type LVM and part size +256M (since (16*15) = 240 , +16M(size of each PE))
+* `pvcreate /dev/sda#`
+* `vgcreate -s +16M vgdata /dev/sda#`
+* `lvcreate -L +240M -n lvdata vgdata`
+* `mkfs.vfat /dev/vgdata/lvdata`
+* `mkdir /mnt/strore`
+* `make the entry in fstab` (to make it persistent)
+* mount -a (to check if mount details were right)
+* `df -h` 
