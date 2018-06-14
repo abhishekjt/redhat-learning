@@ -60,3 +60,13 @@ RHEL 7 tips and tricks
 * `lvextend -L +160M /dev/marvel/slab` (if it shows no space, add volume using vgextend ) (check `lvs`)
 * `xfs_growfs /dev/marvel/slab` (check `df-h`)
 
+11. Create a group named "stoogs".A user “curly” and “larry” should belongs to "stoogs" group as a secondary group . A user “moe” should not have access to interactive shell and he should not be a member of "stoogs" group. passwd for all user created should be "jenny".
+* `groupadd stoogs`
+* `useradd curly`
+* `useradd larry`
+* `usermod -aG stoogs curly`
+* `usermod -aG stoogs larry`
+* `useradd -s /sbin/nologin moe`
+* `passwd curly`
+* `passwd larry`
+* `passwd moe`
