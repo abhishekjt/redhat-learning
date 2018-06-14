@@ -70,3 +70,5 @@ RHEL 7 tips and tricks
 * `passwd curly`
 * `passwd larry`
 * `passwd moe`
+
+12. Create the Directory "/home/manager" with the following characteristics. Group ownership of "/home/manager" should go to "stoogs" group. The directory should be have full permission for all members of "stoogs" group but not to any other users except "root". Files created under "/home/manager" should get the same group ownership is set to the "stoogs" group.
