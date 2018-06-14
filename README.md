@@ -31,5 +31,6 @@ RHEL 7 tips and tricks
 * `fdisk /dev/sda` #create partition with 250MB
 * `mkswap /dev/sda#`
 * make entry in `/etc/fstab` 
+* `mount -a`
 * `swapon -a`
 * `free -m`
