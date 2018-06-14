@@ -46,3 +46,6 @@ RHEL 7 tips and tricks
 * `make the entry in fstab` (to make it persistent)
 * mount -a (to check if mount details were right)
 * `df -h` 
+
+9. List all lines which have string "enter" from /usr/share/dict/words file and copy the lines to /root/words.found file.
+* `grep enter /usr/share/dict/words > /root/words.found`
