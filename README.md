@@ -49,3 +49,13 @@ RHEL 7 tips and tricks
 
 9. List all lines which have string "enter" from /usr/share/dict/words file and copy the lines to /root/words.found file.
 * `grep enter /usr/share/dict/words > /root/words.found`
+
+10. Create the "LVM" with the name "slab" of 160MB from the volume group "marvel". Consider the PE size as "8MB". Mount it on /mnt/slab with filesystem xfs. Resize the lvm "/dev/marvel/slab" so that after reboot size should be 320MB.
+* use fdisk to create partition of 328M (because we need to resize it to 320M)
+* `pvcreate /dev/sda#`
+* `vgcreate -s +8M marvel /dev/sda#`
+* `lvcreate -L +160M -n slab marvel`
+* `mkfs.xfs /dev/marvel/slab`
+* make the entry in /etc/fstab
+* `lvextend -L +160M /dev/marvel/slab` (if it shows no space, add volume using vgextend )
+* `xfs_growfs /dev/marvel/slab`
